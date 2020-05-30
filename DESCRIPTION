@@ -3,7 +3,7 @@ Type: Package
 Title: Task Oriented Interface for Exploratory Data Analysis
 Version: 0.1.0
 Author: Viswa Viswanathan
-URL: http://github.com/kviswana/ezEDA
+URL: http://github.com/kviswana/ezEDA  
 BugReports: http://github.com/kviswana/ezEDA/issues
 Maintainer: Viswa Viswanathan <kv.viswana@gmail.com>
 Description: Enables users to create visualizations using functions 
