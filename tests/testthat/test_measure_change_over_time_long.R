@@ -8,9 +8,8 @@ test_that("Plot returns ggplot object",{
 })
 
 test_that("Plot uses correct data",{
-  expect_that(names(p$data), equals(c("date", "variable", "value", "value01", ".group")))
+  expect_equal(TRUE, all(c("date", "variable", "value") %in% names(p$data)))
 })
-
 test_that("x axis is labeled 'date'",{
   expect_identical(p$labels$x, "date")
 })

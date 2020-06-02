@@ -20,8 +20,10 @@ A ggplot plot object
 Plot the relationship between two measures and optionally highlight a category (factor)
 }
 \examples{
+\dontrun{
 two_measures_relationship(ggplot2::diamonds, carat, price)
 two_measures_relationship(ggplot2::diamonds, carat, depth)
+}
 two_measures_relationship(ggplot2::mpg, displ, hwy)
 two_measures_relationship(ggplot2::mpg, cty, hwy)
 two_measures_relationship(ggplot2::mpg, displ, hwy, class)

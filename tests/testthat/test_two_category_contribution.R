@@ -8,7 +8,7 @@ test_that("Plot returns ggplot object",{
 })
 
 test_that("Plot uses correct data",{
-  expect_that(names(p$data), equals(c("clarity", "cut", "total_price", ".group")))
+  expect_equal(TRUE, all(c("clarity", "cut", "total_price") %in% names(p$data)))
 })
 
 test_that("x axis is labeled 'clarity'",{
