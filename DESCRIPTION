@@ -2,7 +2,7 @@ Package: ezEDA
 Type: Package
 Title: Task Oriented Interface for Exploratory Data Analysis
 Version: 0.1.0
-Author: Viswa Viswanathan
+Authors@R: person("Viswa", "Viswanathan", email = "kv.viswana@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-4395-5061"))
 URL: http://github.com/kviswana/ezEDA
 BugReports: http://github.com/kviswana/ezEDA/issues
 Maintainer: Viswa Viswanathan <kv.viswana@gmail.com>
@@ -10,7 +10,8 @@ Description: Enables users to create visualizations using functions
     based on the data analysis task rather than on plotting mechanics. It hides
     the details of the individual ggplot2 function calls and 
     allows the user to focus on the end goal. Useful for quick preliminary explorations. 
-    Provides functions for common exploration patterns.
+    Provides functions for common exploration patterns. Some of the ideas in this
+    package are motivated by Fox(2015, ISBN:1938377052).
 Depends: R (>= 3.1)
 Imports: 
     ggplot2 (>= 3.1.0), 

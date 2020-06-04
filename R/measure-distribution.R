@@ -16,7 +16,7 @@
 measure_distribution <- function(data, measure, type = "hist", bwidth = NULL) {
     m <- rlang::enquo(measure)
     if (!(type %in% c("hist", "box"))) {
-        print("Type must be 'hist' or 'box'")
+        message("Type must be 'hist' or 'box'")
         return(1)
     }
     g <- ggplot(data)
@@ -52,7 +52,7 @@ measure_distribution_by_category <- function(data, measure, category, type = "hi
     m <- rlang::enquo(measure)
     cat <- rlang::enquo(category)
     if (!(type %in% c("hist", "box"))) {
-        print("Type must be 'hist' or 'box'")
+        message("Type must be 'hist' or 'box'")
         return(1)
     }
     g <- ggplot(data)
