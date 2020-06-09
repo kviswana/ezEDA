@@ -8,7 +8,7 @@
 #' category_tally(ggplot2::mpg, class)
 #' category_tally(ggplot2::diamonds, cut)
 category_tally <- function(data, category_column) {
-    cat = rlang::enquo(category_column)
+    cat <- rlang::enquo(category_column)
     col_name <- rlang::as_label(cat)
     tab <- table(data[[col_name]])
     data[[col_name]] <- factor(data[[col_name]], levels = names(sort(tab)))

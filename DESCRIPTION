@@ -8,10 +8,10 @@ BugReports: http://github.com/kviswana/ezEDA/issues
 Maintainer: Viswa Viswanathan <kv.viswana@gmail.com>
 Description: Enables users to create visualizations using functions 
     based on the data analysis task rather than on plotting mechanics. It hides
-    the details of the individual ggplot2 function calls and 
+    the details of the individual 'ggplot2' function calls and 
     allows the user to focus on the end goal. Useful for quick preliminary explorations. 
     Provides functions for common exploration patterns. Some of the ideas in this
-    package are motivated by Fox(2015, ISBN:1938377052).
+    package are motivated by Fox (2015, ISBN:1938377052).
 Depends: R (>= 3.1)
 Imports: 
     ggplot2 (>= 3.1.0), 

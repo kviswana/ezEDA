@@ -13,7 +13,7 @@ measure_change_over_time_wide <- function(data, time_col, ...) {
   tcol <- rlang::enquo(time_col)
   mcols <- rlang::enquos(...)
   if (length(mcols) > 6) {
-    cat("Sorry! This function supports a maximum of 6 measures")
+    message("Sorry! This function supports a maximum of 6 measures")
     return(1)
   } else {
     d <- data %>%
