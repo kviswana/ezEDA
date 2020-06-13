@@ -2,7 +2,7 @@
 % Please edit documentation in R/tallies.R
 \name{two_category_tally}
 \alias{two_category_tally}
-\title{Plot counts of combinations of two category (factor) columns}
+\title{Plot counts of combinations of two category columns}
 \usage{
 two_category_tally(
   data,
@@ -15,7 +15,7 @@ two_category_tally(
 \arguments{
 \item{data}{A data frame or tibble}
 
-\item{main_category, sub_category}{Unquoted column names of two categories (factors)}
+\item{main_category, sub_category}{Unquoted column names of two categories (can be factor, character or numeric)}
 
 \item{separate}{Boolean indicating whether the plot should be faceted or not}
 
@@ -25,7 +25,7 @@ two_category_tally(
 A ggplot plot object
 }
 \description{
-Plot counts of combinations of two category (factor) columns
+Plot counts of combinations of two category columns
 }
 \examples{
 two_category_tally(ggplot2::mpg, class, drv)

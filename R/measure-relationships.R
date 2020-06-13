@@ -1,8 +1,8 @@
-#' Plot the relationship between two measures and optionally highlight a category (factor)
+#' Plot the relationship between two measures and optionally highlight a category
 #'
 #' @param data A data frame or tibble
 #' @param measure1,measure2 Unquoted column names of measures
-#' @param category Unquoted name of a categorical colymn (factor)
+#' @param category Unquoted name of a category (can be factor, character or numeric)
 #' @return A ggplot plot object
 #' @export
 #' @examples
@@ -16,11 +16,15 @@
 two_measures_relationship <- function(data, measure1, measure2, category = NULL) {
     m1 <- rlang::enquo(measure1)
     m2 <- rlang::enquo(measure2)
-    cat <- enquo(category)
+    cat <- rlang::enquo(category)
+    cat_unspecified <- rlang::quo_is_null(cat)
+    if (!cat_unspecified) { data <- col_to_factor(data, cat) }
     g = ggplot(data, aes(!!m1, !!m2))
-    if (is.null(category))
+    if (cat_unspecified)
         g + geom_point() + geom_smooth()
-    else g + geom_point(mapping = aes(color = !!cat)) + geom_smooth()
+    else g + geom_point(mapping = aes(color = !!cat)) +
+      geom_smooth() +
+      facet_wrap(vars(!!cat))
 }
 
 #' Plot the relationship between many measures

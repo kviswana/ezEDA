@@ -2,20 +2,20 @@
 % Please edit documentation in R/tallies.R
 \name{category_tally}
 \alias{category_tally}
-\title{Plot counts of a category (factor) column}
+\title{Plot counts of a category}
 \usage{
 category_tally(data, category_column)
 }
 \arguments{
 \item{data}{A data frame or tibble}
 
-\item{category_column}{Unquoted column name containing the factor levels to be counted}
+\item{category_column}{Unquoted column name of category (can be factor, character or numeric)}
 }
 \value{
 A ggplot plot object
 }
 \description{
-Plot counts of a category (factor) column
+Plot counts of a category
 }
 \examples{
 category_tally(ggplot2::mpg, class)

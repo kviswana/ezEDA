@@ -2,14 +2,14 @@
 % Please edit documentation in R/contributions.R
 \name{category_contribution}
 \alias{category_contribution}
-\title{Plot the contribution to a measure of different category levels (factor levels)}
+\title{Plot the contribution of different categories to a measure}
 \usage{
 category_contribution(data, category, measure)
 }
 \arguments{
 \item{data}{A data frame or tibble}
 
-\item{category}{Unquoted name of category (factor) column}
+\item{category}{Unquoted name of category (can be factor, character or numeric)}
 
 \item{measure}{Unquoted name of measure}
 }
@@ -17,7 +17,7 @@ category_contribution(data, category, measure)
 A ggplot plot object
 }
 \description{
-Plot the contribution to a measure of different category levels (factor levels)
+Plot the contribution of different categories to a measure
 }
 \examples{
 category_contribution(ggplot2::diamonds, cut, price)

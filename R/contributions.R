@@ -1,7 +1,7 @@
-#' Plot the contribution to a measure of different category levels (factor levels)
+#' Plot the contribution of different categories to a measure
 #'
 #' @param data A data frame or tibble
-#' @param category Unquoted name of category (factor) column
+#' @param category Unquoted name of category (can be factor, character or numeric)
 #' @param measure Unquoted name of measure
 #' @return A ggplot plot object
 #' @export
@@ -22,7 +22,7 @@ category_contribution <- function(data, category, measure) {
 #' Plot the contribution to a measure by combinations of two categories
 #'
 #' @param data A data frame or tibble
-#' @param category1,category2 Unquoted names of category (factor) columns
+#' @param category1,category2 Unquoted names of category columns (can be factor, character or numeric)
 #' @param measure Unquoted name of measure
 #' @param separate Boolean to indicate whether the plots for different combinations should be in different facets
 #' @return A ggplot plot object
@@ -35,6 +35,7 @@ two_category_contribution <- function(data, category1, category2, measure,
   tot <- NULL
     cat_1 <- rlang::enquo(category1)
     cat_2 <- rlang::enquo(category2)
+    data <- col_to_factor(data, cat_2)
     meas <- rlang::enquo(measure)
 
     dat_1 <- data %>% group_by(!!cat_1) %>% summarize(tot = sum(!!meas)) %>%

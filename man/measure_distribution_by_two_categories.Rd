@@ -2,7 +2,7 @@
 % Please edit documentation in R/measure-distribution.R
 \name{measure_distribution_by_two_categories}
 \alias{measure_distribution_by_two_categories}
-\title{Plot the distribution of a numeric (measure) column differentiated by two categories (factors)}
+\title{Plot the distribution of a numeric (measure) column differentiated by two categories}
 \usage{
 measure_distribution_by_two_categories(
   data,
@@ -17,7 +17,7 @@ measure_distribution_by_two_categories(
 
 \item{measure}{Unquoted column name of containing numbers (measure)}
 
-\item{category1, category2}{Unquoted column names of categories}
+\item{category1, category2}{Unquoted column names of categories (can be factor, character or numeric)}
 
 \item{bwidth}{width of bin for histogram (by default uses binwidth for 30 bins)}
 }
@@ -25,7 +25,7 @@ measure_distribution_by_two_categories(
 A ggplot plot object
 }
 \description{
-Plot the distribution of a numeric (measure) column differentiated by two categories (factors)
+Plot the distribution of a numeric (measure) column differentiated by two categories
 }
 \examples{
 measure_distribution_by_two_categories(ggplot2::mpg, hwy, class, fl)

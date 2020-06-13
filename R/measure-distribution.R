@@ -30,11 +30,11 @@ measure_distribution <- function(data, measure, type = "hist", bwidth = NULL) {
     }
 }
 
-#' Plot the distribution of a numeric (measure) column differentiated by a category (factor)
+#' Plot the distribution of a numeric (measure) column differentiated by a category
 #'
 #' @param data A data frame or tibble
-#' @param measure Unquoted column name of containing numbers (measure)
-#' @param category Unquoted column name of category factor)
+#' @param measure Unquoted column name of measure (containing numbers)
+#' @param category Unquoted column name of category (can be factor, character or numeric)
 #' @param type Histogram ("hist") or Boxplot ("box")
 #' @param separate Boolean specifying whether to plot each category in a separate facet
 #' @param bwidth width of bin for histogram (by default uses binwidth for 30 bins)
@@ -51,6 +51,7 @@ measure_distribution_by_category <- function(data, measure, category, type = "hi
     separate = FALSE, bwidth = NULL) {
     m <- rlang::enquo(measure)
     cat <- rlang::enquo(category)
+    data <- col_to_factor(data, cat)
     if (!(type %in% c("hist", "box"))) {
         message("Type must be 'hist' or 'box'")
         return(1)
@@ -69,11 +70,11 @@ measure_distribution_by_category <- function(data, measure, category, type = "hi
     }
 }
 
-#' Plot the distribution of a numeric (measure) column differentiated by two categories (factors)
+#' Plot the distribution of a numeric (measure) column differentiated by two categories
 #'
 #' @param data A data frame or tibble
 #' @param measure Unquoted column name of containing numbers (measure)
-#' @param category1,category2 Unquoted column names of categories
+#' @param category1,category2 Unquoted column names of categories (can be factor, character or numeric)
 #' @param bwidth width of bin for histogram (by default uses binwidth for 30 bins)
 #' @return A ggplot plot object
 #' @export

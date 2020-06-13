@@ -2,7 +2,7 @@
 % Please edit documentation in R/measure-distribution.R
 \name{measure_distribution_by_category}
 \alias{measure_distribution_by_category}
-\title{Plot the distribution of a numeric (measure) column differentiated by a category (factor)}
+\title{Plot the distribution of a numeric (measure) column differentiated by a category}
 \usage{
 measure_distribution_by_category(
   data,
@@ -16,9 +16,9 @@ measure_distribution_by_category(
 \arguments{
 \item{data}{A data frame or tibble}
 
-\item{measure}{Unquoted column name of containing numbers (measure)}
+\item{measure}{Unquoted column name of measure (containing numbers)}
 
-\item{category}{Unquoted column name of category factor)}
+\item{category}{Unquoted column name of category (can be factor, character or numeric)}
 
 \item{type}{Histogram ("hist") or Boxplot ("box")}
 
@@ -30,7 +30,7 @@ measure_distribution_by_category(
 A ggplot plot object
 }
 \description{
-Plot the distribution of a numeric (measure) column differentiated by a category (factor)
+Plot the distribution of a numeric (measure) column differentiated by a category
 }
 \examples{
 measure_distribution_by_category(ggplot2::diamonds, price, cut)

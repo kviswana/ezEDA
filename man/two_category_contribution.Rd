@@ -15,7 +15,7 @@ two_category_contribution(
 \arguments{
 \item{data}{A data frame or tibble}
 
-\item{category1, category2}{Unquoted names of category (factor) columns}
+\item{category1, category2}{Unquoted names of category columns (can be factor, character or numeric)}
 
 \item{measure}{Unquoted name of measure}
 

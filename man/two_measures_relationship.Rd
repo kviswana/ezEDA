@@ -2,7 +2,7 @@
 % Please edit documentation in R/measure-relationships.R
 \name{two_measures_relationship}
 \alias{two_measures_relationship}
-\title{Plot the relationship between two measures and optionally highlight a category (factor)}
+\title{Plot the relationship between two measures and optionally highlight a category}
 \usage{
 two_measures_relationship(data, measure1, measure2, category = NULL)
 }
@@ -11,13 +11,13 @@ two_measures_relationship(data, measure1, measure2, category = NULL)
 
 \item{measure1, measure2}{Unquoted column names of measures}
 
-\item{category}{Unquoted name of a categorical colymn (factor)}
+\item{category}{Unquoted name of a category (can be factor, character or numeric)}
 }
 \value{
 A ggplot plot object
 }
 \description{
-Plot the relationship between two measures and optionally highlight a category (factor)
+Plot the relationship between two measures and optionally highlight a category
 }
 \examples{
 \dontrun{

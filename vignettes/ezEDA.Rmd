@@ -88,6 +88,7 @@ Simultaneously visualize the change over time of several measures (up to 6) when
 ## In this dataset, the different measures are in different columns
 measure_change_over_time_wide(ggplot2::economics, date, pop, unemploy)
 ```
+
 ### measure_change_over_time_long
 Simultaneously visualize the change over time of several measures (up to 6) when the data is in long form (see above). 
 ```{r measure_change_over_time_long}
@@ -106,6 +107,7 @@ Distribution of a measure: default is histogram.
 ## For ggplot2::mpg, plot the distribution of highway mileage
 measure_distribution(ggplot2::mpg, hwy)
 ```
+
 Distribution of a measure: default is histogram. By default the function uses a bin width corresponding to 30 bins. Use the bwidth argument to specify the desired value for the width of each bin.
 ```{r measure_distribution_2}
 ## For ggplot2::mpg, plot the distribution of highway mileage 
@@ -117,6 +119,7 @@ Distribution of a measure. Get a boxplot instead of histogram.
 ## For ggplot2::mpg, plot the distribution of highway mileage as a boxplot
 measure_distribution(ggplot2::mpg, hwy, type = "box")
 ```
+
 ### measure_distribution_by_category
 Distribution of a measure with highlighting of different values of a single category.
 ```{r measure_distribution_by_category_1}
@@ -131,6 +134,7 @@ Distribution of a measure with highlighting of different values of a single cate
 ## the distribution for each kind of cut in a different facet
 measure_distribution_by_category(ggplot2::diamonds, price, cut, separate = TRUE)
 ```
+
 ### measure_distribution_by_two_categories
 Distribution of a measure for a combination of two categories within a facet grid
 ```{r measure_distribution_by_two_categories}
@@ -162,11 +166,14 @@ Scatterplot of the relationship between two measures with optional coloring of p
 two_measures_relationship(ggplot2::mpg, displ, hwy)
 ```
 
-Below is a variant with coloring of points by a category.
+
+Below is a variant shopwing the relationship separately for each value of a category.
+
 ```{r two_measures_relationship_2}
-## For ggplot2::mpg, plot the highway mileage against the displacement  
-## while showing cars of different class through the color of the point
-two_measures_relationship(ggplot2::mpg, displ, hwy, class)
+## For ggplot2::diamonds, plot the price against carat   
+## while showing the relationship separately for diamionds of
+## each kind of cut
+two_measures_relationship(ggplot2::diamonds, carat, price, cut)
 ```
 
 ### multi_measures_relationship
