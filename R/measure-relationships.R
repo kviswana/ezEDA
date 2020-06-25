@@ -6,7 +6,7 @@
 #' @return A ggplot plot object
 #' @export
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' two_measures_relationship(ggplot2::diamonds, carat, price)
 #' two_measures_relationship(ggplot2::diamonds, carat, depth)
 #' }
