@@ -12,11 +12,12 @@ test_that("Plot uses correct data",{
 })
 
 test_that("x axis is labeled 'cut'",{
-  expect_identical(p$labels$x, "cut")
+  expect_match(p$labels$x, "cut")
 })
 
-test_that("y axis is labeled 'total_price'",{
-  expect_identical(p$labels$y, "total_price")
+
+test_that("y axis is labeled 'total_price' -- 2",{
+  expect_match(p$labels$y, "total_price")
 })
 
 

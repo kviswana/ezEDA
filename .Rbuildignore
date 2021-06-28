@@ -4,3 +4,7 @@
 ^doc$
 ^Meta$
 ^cran-comments\.md$
+^.*\.tar.gz$
+^.*\.md$
+^.*\.bib$
+^README\.Rmd$

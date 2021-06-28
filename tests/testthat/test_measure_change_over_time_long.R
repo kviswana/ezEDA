@@ -11,11 +11,11 @@ test_that("Plot uses correct data",{
   expect_equal(TRUE, all(c("date", "variable", "value") %in% names(p$data)))
 })
 test_that("x axis is labeled 'date'",{
-  expect_identical(p$labels$x, "date")
+  expect_match(p$labels$x, "date")
 })
 
 test_that("y axis is labeled 'value'",{
-  expect_identical(p$labels$y, "value")
+  expect_match(p$labels$y, "value")
 })
 
 

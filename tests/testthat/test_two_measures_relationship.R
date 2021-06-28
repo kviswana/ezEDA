@@ -12,11 +12,11 @@ test_that("Plot uses correct data",{
 })
 
 test_that("x axis is labeled 'displ'",{
-  expect_identical(p$labels$x, "displ")
+  expect_match(p$labels$x, "displ")
 })
 
 test_that("y axis is labeled 'hwy'",{
-  expect_identical(p$labels$y, "hwy")
+  expect_match(p$labels$y, "hwy")
 })
 
 

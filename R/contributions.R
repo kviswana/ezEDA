@@ -51,5 +51,5 @@ two_category_contribution <- function(data, category1, category2, measure,
     coord_flip()
 
     if (separate)
-        g + facet_wrap(vars(!!cat_2)) + guides(fill = FALSE) else g
+        g + facet_wrap(vars(!!cat_2)) + guides(fill = "none") else g
 }

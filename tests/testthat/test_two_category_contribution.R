@@ -12,7 +12,7 @@ test_that("Plot uses correct data",{
 })
 
 test_that("x axis is labeled 'clarity'",{
-  expect_identical(p$labels$x, "clarity")
+  expect_match(p$labels$x, "clarity")
 })
 
 test_that("y axis is labeled 'total_price'",{

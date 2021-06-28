@@ -18,15 +18,15 @@ test_that("Plot uses correct data",{
 })
 
 test_that("x axis label is h",{
-  expect_identical(p$labels$x, "h")
+  expect_match(p$labels$x, "h")
 })
 
 test_that("y axis is labeled 'count'",{
-  expect_identical(p$labels$y, "count")
+  expect_match(p$labels$y, "count")
 })
 
 test_that("Facet type is correct", {
-  expect_identical(class(p$facet)[[1]], "FacetWrap")
+  expect_match(class(p$facet)[[1]], "FacetWrap")
 })
 
 

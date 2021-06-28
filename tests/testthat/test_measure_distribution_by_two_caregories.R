@@ -12,15 +12,15 @@ test_that("Plot uses correct data",{
 })
 
 test_that("x axis label is hwy",{
-  expect_identical(p$labels$x, "hwy")
+  expect_match(p$labels$x, "hwy")
 })
 
 test_that("y axis label is correct",{
-  expect_identical(p$labels$y, "count")
+  expect_match(p$labels$y, "count")
 })
 
 test_that("Facet type is correct", {
-  expect_identical(class(p$facet)[[1]], "FacetGrid")
+  expect_match(class(p$facet)[[1]], "FacetGrid")
 })
 
 

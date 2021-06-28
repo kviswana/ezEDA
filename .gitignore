@@ -4,3 +4,5 @@ Meta
 .DS_Store
 .RData
 .Rhistory
+paper.bib
+paper.md

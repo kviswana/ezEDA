@@ -20,21 +20,21 @@ test_that("Plot uses correct data",{
 })
 
 test_that("x axis label is hwy",{
-  expect_identical(p$labels$x, "hwy")
-  expect_identical(q$labels$x, "hwy")
-  expect_identical(r$labels$x, "")
+  expect_match(p$labels$x, "hwy")
+  expect_match(q$labels$x, "hwy")
+  expect_match(r$labels$x, "")
 })
 
 test_that("y axis label is correct",{
-  expect_identical(p$labels$y, "count")
-  expect_identical(q$labels$y, "count")
-  expect_identical(r$labels$y, "hwy")
+  expect_match(p$labels$y, "count")
+  expect_match(q$labels$y, "count")
+  expect_match(r$labels$y, "hwy")
 })
 
 test_that("Plot type is correct", {
-  expect_identical(class(p$layers[[1]][["geom"]])[[1]], "GeomBar")
-  expect_identical(class(q$layers[[1]][["geom"]])[[1]], "GeomBar")
-  expect_identical(class(r$layers[[1]][["geom"]])[[1]], "GeomBoxplot")
+  expect_match(class(p$layers[[1]][["geom"]])[[1]], "GeomBar")
+  expect_match(class(q$layers[[1]][["geom"]])[[1]], "GeomBar")
+  expect_match(class(r$layers[[1]][["geom"]])[[1]], "GeomBoxplot")
 })
 
 
